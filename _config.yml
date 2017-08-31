@@ -83,3 +83,6 @@ deploy:
   branch: master
 
 favicon: /favicon.ico
+
+
+# skip_render: test.html

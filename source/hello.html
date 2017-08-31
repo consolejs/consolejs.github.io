@@ -1,0 +1,63 @@
+---
+title: Hello
+---
+
+<style type="text/css">
+  .base {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: 700;
+  }
+
+  .skills {
+    width: 376px;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 40px auto 0;
+    letter-spacing: .1em;
+    font-weight: 300;
+    color: #2C3E50;
+    font-size: 1.45rem;
+  }
+
+  .typewriter {
+    animation: typing 5s steps(40, end), blink-caret .75s step-end infinite;
+  }
+  /* The typing effect */
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 376px;
+    }
+  }
+  /* The typewriter cursor effect */
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    .article-content {
+      padding: 0;
+    }
+    .skills {
+      font-size: 1.08rem;
+      max-width: 280px;
+    }
+  }
+</style>
+
+<div class="base skills typewriter">🐳🐳 Hi, <b>welcome!</b> I'm Kun. 😂</div>
