@@ -10,7 +10,9 @@ tags: css
 ## W3C提出的一种新的方案
 ### Flex布局，可以简便、完整、响应式地实现各种页面布局。
 
-<img class="br10" src="https://i.loli.net/2017/08/28/59a3e65e22d64.png">
+<img src="/2017/08/28/css3-flex/c01.png">
+
+
 
 ## 浏览器支持
 <img class="br10" src="https://i.loli.net/2017/08/28/59a3e6836832a.jpg">
@@ -66,7 +68,7 @@ Flexible Box的缩写，意为"弹性布局"，
 
 ---
 
-<img class="br10" src="https://i.loli.net/2017/08/28/59a3e5f44e696.png">
+<img class="br10" src="/2017/08/28/css3-flex/css09.png">
 
 
 > flex布局发生在`父容器`和`子容器`之间。父容器需要有flex的环境(display:flex;)，子容器才能根据自身的属性来布局，简单的说，就是瓜分父容器的空间。相反就是说如果父容器没有flex的环境，那么子容器就无法使用flex的规则来划分父容器的空间。
@@ -106,7 +108,7 @@ Flexible Box的缩写，意为"弹性布局"，
 
 ---
 
-<img class="br10" src="https://i.loli.net/2017/08/28/59a3e701a1daa.png">
+<img class="br10" src="/2017/08/28/css3-flex/css12.png">
 
 ### Flex-direction Demo
 
@@ -134,25 +136,25 @@ Flexible Box的缩写，意为"弹性布局"，
     }
 ```
 
-<img class="br10" src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071006.png">
+<img class="br10" src="/2017/08/28/css3-flex/c03.png">
 
 ### （1）nowrap（默认）：不换行
 
 ---
 
-<img class="br10"  src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071007.png">
+<img class="br10"  src="/2017/08/28/css3-flex/c04.png">
 
 ### (2）wrap：换行，第一行在上方
 
 ---
 
-<img class="br10"  src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071008.jpg">
+<img class="br10"  src="/2017/08/28/css3-flex/c05.jpg">
 
 ### (3) wrap-reverse：换行，第一行在下方
 
 ---
 
-<img class="br10"  src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071009.jpg">
+<img class="br10"  src="/2017/08/28/css3-flex/c06.jpg">
 
 [demo](http://www.oxxostudio.tw/demo/201501/css-flexbox-demo7.html)  
 
@@ -201,7 +203,7 @@ Flexible Box的缩写，意为"弹性布局"，
 
 ## [下面假设主轴**从左到右**]
 
-<img class="br10" src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071010.png">
+<img class="br10" src="/2017/08/28/css3-flex/c07.png">
 
 [demo](http://www.oxxostudio.tw/demo/201501/css-flexbox-demo3.html)  
 
@@ -246,7 +248,7 @@ Flexible Box的缩写，意为"弹性布局"，
 
 ## [下面假设交叉轴**从上到下**]
 
-<img class="br10" src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071011.png">
+<img class="br10" src="/2017/08/28/css3-flex/c08.png">
 
 ```css
     .box {
@@ -283,7 +285,7 @@ Flexible Box的缩写，意为"弹性布局"，
 
 ---
 
-<img class="br10" src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071012.png">
+<img class="br10" src="/2017/08/28/css3-flex/c09.png">
 
 ```css
     .box {
@@ -318,7 +320,7 @@ Flexible Box的缩写，意为"弹性布局"，
 
 ---
 
-<img class="br10" src="https://i.loli.net/2017/08/28/59a3eab95d3ae.png">
+<img class="br10" src="/2017/08/28/css3-flex/css34.png">
 
 ### order Demo
 
@@ -490,7 +492,7 @@ Flexible Box的缩写，意为"弹性布局"，
 ```
 
 [slide]
-<img class="br10" src="https://ooo.0o0.ooo/2017/08/29/59a4d56ab394b.png">
+<img class="br10" src="/2017/08/28/css3-flex/css46.png">
 
 ### align-self Demo
 ---
