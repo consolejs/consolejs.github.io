@@ -12,20 +12,12 @@ tags: css3 Flex
 css布局： <span class="yellow">Table</span> **->** <span class="blue">Float + Position </span>**-->** <span class="green">Flex</span>
 
 
-CSS Grid(网格) 布局（又称为 “Grid(网格)” ），<br>
-是一个`二维`的基于网格的布局系统.<br>
-它的目标是完全改变我们基于网格的用户界面的布局方式。
+CSS Grid(网格) 布局（又称为 “Grid(网格)” ），是一个`二维`的基于网格的布局系统. 它的目标是完全改变我们基于网格的用户界面的布局方式。
 
 
-CSS Grid布局是目前CSS 中最强大的布局系统。<br>
-与 **flexbox** 的一维布局系统不同，<br>
-CSS Grid 布局是一个二维布局系统，<br>
-也就意味着它可以同时处理`列和行`。
+CSS Grid布局是目前CSS 中最强大的布局系统。与 **flexbox** 的一维布局系统不同，CSS Grid 布局是一个二维布局系统，也就意味着它可以同时处理`列和行`。
 
-通过将 CSS 规则应用于 <br>
-**父元素** (成为 Grid Container 网格容器)<br>
-及 **子元素**（成为 Grid Items 网格项），<br>
-你就可以轻松使用 Grid(网格) 布局。
+通过将 CSS 规则应用于 **父元素** (成为 Grid Container 网格容器) 及 **子元素**（成为 Grid Items 网格项），你就可以轻松使用 Grid(网格) 布局。
 
 
 ### 浏览器支持[caniuse](https://caniuse.com/#feat=css-grid)
