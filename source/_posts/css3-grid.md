@@ -1,7 +1,7 @@
 ---
 title: 关于 Css3 Grid 
 date: 2018-04-08 15:25:41
-tags: css3 Flex
+tags: css3 Grid
 ---
 
 # CSS3 Grid
@@ -843,8 +843,6 @@ last baseline
 
 
 
-
-
 ## <span class="yellow3">参考资料</span>
 
 + https://www.w3cplus.com/css/learncssgrid.html
@@ -855,7 +853,14 @@ last baseline
 + https://css-tricks.com/snippets/css/complete-guide-grid/
 + https://gridbyexample.com/
 
-#完
+
+<br/>
+
+> 声明:本资料仅供学习交流，严禁使用于任何商业用途!  相关资料参考自以上备注。 如需转载，转载请注明出处。
+
+
+<br/>
+### 完.
 
 
 
