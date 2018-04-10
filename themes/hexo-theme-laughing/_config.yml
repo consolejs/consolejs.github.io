@@ -1,0 +1,41 @@
+# Icon
+favicon: /favicon.ico
+# SEO
+keywords: Hexo, Gruntjs, Nodejs, Reactjs, Vuejs
+# Header
+page_background: https://i.loli.net/2017/08/25/599fecc80cc8d.jpg
+page_menu_button: dark
+post_background: https://i.loli.net/2017/08/25/599fecf221573.jpg
+post_menu_button: light
+title_plancehold: 随笔
+author:
+  head: https://avatars2.githubusercontent.com/u/5219949?v=4&s=460
+  signature: Never put off what you can do today until tomorrow.
+navication:
+  - name: Github
+    link: https://github.com/consolejs
+  - name: Hello
+    link: /hello.html
+# content
+content_width: 800
+# Footer
+## Social icon list: [facebook, twitter, weibo, wechat, github, stackoverflow, linkin, email, segmentfault, flickr, zhihu, disqus, douban, bilibili]
+social:
+  - name: Github
+    icon: github
+    link: https://github.com/consolejs
+  # - name: Weibo
+  #   icon: weibo
+  #   link: https://weibo.com/heqibang
+  # - name: SegmentFault
+  #   icon: segmentfault
+  #   link: https://www.segmentfault.com/u/bon
+# Duoshuo
+duoshuo:
+  enable: false
+  siteName: ueibo
+# Copyright
+copyright:
+  record: false
+  hexo: true
+  laughing: true
