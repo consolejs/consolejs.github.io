@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Blogs
+title: 城池
 subtitle:
 description:
 author: 城池
-language:
-timezone:
+language: cn
+timezone: Beijing
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
