@@ -18,9 +18,9 @@ block content
           li
             i.icon.icon-author
             | #{config.author}
-          li
-            i.icon.icon-clock
-            | #{parseInt(post.content ? post.content.length/900 : 0)} Minutes
+          //- li
+          //-   i.icon.icon-clock
+          //-   | #{parseInt(post.content ? post.content.length/900 : 0)} Minutes
           li
             i.icon.icon-category
             | !{list_categories(post.categories)}
