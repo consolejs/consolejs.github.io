@@ -31,8 +31,10 @@ social:
   # - name: SegmentFault
   #   icon: segmentfault
   #   link: https://www.segmentfault.com/u/bon
-# Duoshuo
-duoshuo:
+
+# Comment From 来必力
+# https://livere.com/
+comments:
   enable: false
   siteName: ueibo
 # Copyright
