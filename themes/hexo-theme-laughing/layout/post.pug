@@ -18,6 +18,9 @@ block content
         i.icon.icon-category
         | !{list_categories(page.categories)}
   if theme.comments.enable
+    .article-comment.comm-pop(style='max-width:'+ theme.content_width +'px;'+'padding:0 16px;margin:0;')
+      p(style='margin:0;padding:0 0 0 8px;color:#687e8b;').
+        注意言辞，我可以在后台删评论喔~ 🙃🙃
     .article-comment(style='max-width:'+ theme.content_width +'px;'+'padding:0 16px')
       #lv-container(data-id="city" data-uid="MTAyMC8zNTg3My8xMjQwOQ==")
       script.
