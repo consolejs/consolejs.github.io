@@ -4,9 +4,9 @@ favicon: /favicon.ico
 keywords: Hexo, Gruntjs, Nodejs, Reactjs, Vuejs
 # Header
 # https://picsum.photos/1920/800/?random
-page_background: /img/page_bg.jpg
+page_background: /img/
 page_menu_button: dark
-post_background: /img/post_bg.jpg
+post_background: /img/
 post_menu_button: light
 title_plancehold: 随笔
 author:
@@ -36,9 +36,9 @@ social:
 # https://livere.com/
 comments:
   enable: false
-  siteName: ueibo
+  siteName: livere
 # Copyright
 copyright:
   record: false
-  hexo: true
-  laughing: true
+  hexo: false
+  laughing: false

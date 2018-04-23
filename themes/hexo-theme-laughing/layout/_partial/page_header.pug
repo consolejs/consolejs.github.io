@@ -3,8 +3,9 @@
     label.navi-button.light(for="navi") MENU
   else
     label.navi-button(for="navi") MENU
+  - var num = Math.floor(Math.random()*6)
   .background
-    img(src=theme.page_background)
+    img(src=(theme.page_background + '0' + '.jpg'))
   .author
     .head
       img(src=theme.author.head)
