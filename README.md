@@ -26,6 +26,12 @@ $ hexo server
 
 more: [🌴🌴](https://hexo.io/zh-cn/docs/server.html)
 
+### 清除已生成的静态文件
+
+``` bash
+$ hexo clean
+```
+
 ### 生成静态资源
 
 ``` bash

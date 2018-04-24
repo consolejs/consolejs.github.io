@@ -1,6 +1,6 @@
 ---
 title: 关于 Css3 Grid 
-date: 2018-04-08 15:25:41
+date: 2018-05-18 17:25:41
 categories: 前端
 tags: 
 - css
@@ -9,7 +9,7 @@ tags:
 
 # CSS3 Grid
 
-<img class="br10" src="/2018/04/08/css3-grid/c01.jpg">
+<img class="br10" src="/2018/05/18/css3-grid/c01.jpg">
 
 
 css布局： <span class="yellow">Table</span> **->** <span class="blue">Float + Position </span>**-->** <span class="green">Flex</span>
@@ -24,7 +24,7 @@ CSS Grid布局是目前CSS 中最强大的布局系统。与 **flexbox** 的一�
 
 
 ### 浏览器支持[caniuse](https://caniuse.com/#feat=css-grid)
-<img class="br10" src="/2018/04/08/css3-grid/c02.jpg">
+<img class="br10" src="/2018/05/18/css3-grid/c02.jpg">
 
 
 ## 重要术语
@@ -74,7 +74,7 @@ Grid Line: 构成网格结构的分界线。<br>
 ```html
 例如，这里的黄线就是一条列网格线
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c03.png">
+<img class="br10" src="/2018/05/18/css3-grid/c03.png">
 
 
 ## 网格轨道
@@ -83,7 +83,7 @@ Grid Track: 两条相邻网格线之间的空间。<br>
 ```html
 图是第二条和第三条 行网格线 之间的 网格轨道。
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c04.png">
+<img class="br10" src="/2018/05/18/css3-grid/c04.png">
 
 
 ## 网格单元格
@@ -92,7 +92,7 @@ Grid Cell: 两个相邻的行和两个相邻的列网格线之间的空间。<br
 ```html
 图第1至第2条 行网格线 和第2至第3条 列网格线 交汇构成的 网格单元格
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c05.png">
+<img class="br10" src="/2018/05/18/css3-grid/c05.png">
 
 
 ## 网格区域
@@ -101,7 +101,7 @@ Grid Area: 4条网格线包围的总空间。<br>
 ```html
 图是 行网格线1和3，以及列网格线1和3 之间的网格区域。
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c06.png">
+<img class="br10" src="/2018/05/18/css3-grid/c06.png">
 
 
 ## Grid(网格) 属性目录
@@ -235,10 +235,10 @@ grid-template-rows: repeat(2, 60px);
 > 每条线是从网格轨道开始，网格的网格线从1开始，每条网格线逐步增加1
 
 <br>
-<img class="br10" src="/2018/04/08/css3-grid/c08.png">
+<img class="br10" src="/2018/05/18/css3-grid/c08.png">
 
 ## 网格线号
-<img class="br10" src="/2018/04/08/css3-grid/c07.jpg">
+<img class="br10" src="/2018/05/18/css3-grid/c07.jpg">
 
 [demo](https://codepen.io/Frank_/pen/jZJZZz?editors=1100)
 
@@ -257,7 +257,7 @@ item1就是由行和列的号码重新定位。
 如果一个网格项目跨度只有一行或一列，
 那么grid-row-end和grid-column-end不是必需的。
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c09.jpg">
+<img class="br10" src="/2018/05/18/css3-grid/c09.jpg">
 
 [demo](https://codepen.io/Frank_/pen/jZJZZz?editors=1100)
 
@@ -312,7 +312,7 @@ grid-column-end: 4;
 可以通过设置grid-column-end和grid-column-start距离多个网络线号实现多个列跨越。
 ```
 
-<img class="br10" src="/2018/04/08/css3-grid/c10.jpg">
+<img class="br10" src="/2018/05/18/css3-grid/c10.jpg">
 
 [demo](https://codepen.io/Frank_/pen/RQdywY?editors=1100)
 
@@ -325,7 +325,7 @@ grid-row-end: 5;
 ```html
 同样的可以通过grid-row-end和grid-row-start距离多个网格号实现多个行跨越。
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c11.jpg">
+<img class="br10" src="/2018/05/18/css3-grid/c11.jpg">
 
 [demo](https://codepen.io/Frank_/pen/RQdywY?editors=1100)
 
@@ -339,7 +339,7 @@ grid-row-end: 5;
 grid-row: 2 / span 2;
 grid-column: span 2;
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c12.jpg">
+<img class="br10" src="/2018/05/18/css3-grid/c12.jpg">
 
 [demo](https://codepen.io/Frank_/pen/RQdywY?editors=1100)
 
@@ -359,7 +359,7 @@ grid-template-rows和grid-template-columns定义你的网格，将名称分配�
 分配网格线名称必须用方括号[网格线名称]，
 然后后面紧跟网格轨道的尺寸值。
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c13.png">
+<img class="br10" src="/2018/05/18/css3-grid/c13.png">
 
 [demo](https://codepen.io/Frank_/pen/LQarGv?editors=1100)
 
@@ -372,7 +372,7 @@ grid-template-rows和grid-template-columns定义你的网格，将名称分配�
 grid-template-rows:    [row-start row-1-start] 1fr [row-1-end row-2-start] 1fr [row-2-end row-end];
 grid-template-columns: [col-start] 1fr [col-2-start] 1fr [col-3-start] 1fr [col-end];
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c14.png"><br>
+<img class="br10" src="/2018/05/18/css3-grid/c14.png"><br>
 > 每一个网格线的名称可以用来定位网格项目的位置。
 
 
@@ -387,7 +387,7 @@ grid-row-end:      row-end;
 grid-column-start: col-2-start;
 grid-column-end:   col-end;
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c15.png"><br>
+<img class="br10" src="/2018/05/18/css3-grid/c15.png"><br>
 > 引用网格线名称的时候不应该带方括号
 
 [demo](https://codepen.io/Frank_/pen/LQarGv?editors=1100)
@@ -399,7 +399,7 @@ grid-row和grid-column简写属性也适用于网格线名称，也可以用来�
 grid-row:    row-2-start / row-end;
 grid-column: col-2-start / col-end;
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c16.png">
+<img class="br10" src="/2018/05/18/css3-grid/c16.png">
 
 [demo](https://codepen.io/Frank_/pen/LQarGv?editors=1100)
 
@@ -422,7 +422,7 @@ grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
 也且会自动在网格线名称后面添加对应的数字，
 使其网格线名称也是唯一的标识符。
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c17.png">
+<img class="br10" src="/2018/05/18/css3-grid/c17.png">
 
 
 ### 使用相同的网格线名称可以设置网格项目的位置
@@ -441,7 +441,7 @@ col-start的第1条开始，至col-start的第3条结束
 （col-start的第3条也对应的是col-end的第2条），
 用来设置item1在列的起始位置和结束位置。
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c18.png">
+<img class="br10" src="/2018/05/18/css3-grid/c18.png">
 
 
 ### 通过网格区域命名和定位网格项目 （一）
@@ -493,7 +493,7 @@ none：不定义网格区域
 一个是空单元格，一个 sidebar 区域组成。
 最后一行全是 footer 区域组成。
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c34.png">
+<img class="br10" src="/2018/05/18/css3-grid/c34.png">
 ```html
 你的声明中的每一行都需要有相同数量的单元格。
 你可以使用任意数量的相邻的 点. 来声明单个空单元格。 
@@ -527,7 +527,7 @@ grid-template-columns: 1fr 200px;
 网格区域的名称，每组（单引号或双引号内的网格区域名称）定义了网格的一行，
 每个网格区域名称定义网格的一列。
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c19.png">
+<img class="br10" src="/2018/05/18/css3-grid/c19.png">
 
 
 
@@ -542,7 +542,7 @@ grid-row-end:      header;
 grid-column-start: header;
 grid-column-end:   header;
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c20.png">
+<img class="br10" src="/2018/05/18/css3-grid/c20.png">
 
 
 ```css
@@ -553,7 +553,7 @@ grid-column: footer;
 简写的grid-row和grid-column也可以引用网格区域名称，
 设置网格项目的位置。
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c21.png">
+<img class="br10" src="/2018/05/18/css3-grid/c21.png">
 
 
 ```css
@@ -562,7 +562,7 @@ grid-area: sidebar;
 ```html
 grid-area简写属性也可以引用网格区域的名称来设置网格项目的位置。
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c22.png">
+<img class="br10" src="/2018/05/18/css3-grid/c22.png">
 
 
 
@@ -584,7 +584,7 @@ grid-auto-rows:        140px;
 ```
 
 
-<img class="br10" src="/2018/04/08/css3-grid/c23.jpg">
+<img class="br10" src="/2018/05/18/css3-grid/c23.jpg">
 
 ```css
 grid-template-rows:    70px;
@@ -608,7 +608,7 @@ grid-auto-rows定义隐式网格中的行（轨道）的大小，
 //网格默认流方向是row
 grid-auto-row: row
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c24.jpg">
+<img class="br10" src="/2018/05/18/css3-grid/c24.jpg">
 
 [demo2](https://codepen.io/Frank_/pen/ZxBoeV?editors=1100)
 
@@ -618,7 +618,7 @@ grid-auto-row: row
 //可以把网格流的方向改变成column
 grid-auto-flow: column
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c25.jpg">
+<img class="br10" src="/2018/05/18/css3-grid/c25.jpg">
 
 [demo2](https://codepen.io/Frank_/pen/ZxBoeV?editors=1100)
 
@@ -636,7 +636,7 @@ item1的尺寸是100px，item2的尺寸是200px。
 用来放置item3、item4和item5，
 并且这三个列（轨道）的尺寸由grid-auto-columns来定义。
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c26.jpg">
+<img class="br10" src="/2018/05/18/css3-grid/c26.jpg">
 
 [demo3](https://codepen.io/Frank_/pen/ZxBoeV?editors=1100)
 
@@ -657,7 +657,7 @@ grid-template-columns: [outer-start] 1fr [inner-start] 1fr [inner-end] 1fr [inne
 同时也对应的创建一个隐式网格区域名称inner。
 ```
 
-<img class="br10" src="/2018/04/08/css3-grid/c27.png">
+<img class="br10" src="/2018/05/18/css3-grid/c27.png">
 ```css
 grid-area: inner
 ```
@@ -676,7 +676,7 @@ grid-template-areas:   "header header"
 grid-template-rows:    80px 1fr 40px;
 grid-template-columns: 1fr 200px;
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c28.png">
+<img class="br10" src="/2018/05/18/css3-grid/c28.png">
 
 [demo](https://codepen.io/Frank_/pen/vRyrOW?editors=1100)
 
@@ -687,7 +687,7 @@ grid-row-end:      content-start;
 grid-column-start: footer-start;
 grid-column-end:   sidebar-end;
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c29.png">
+<img class="br10" src="/2018/05/18/css3-grid/c29.png">
 
 > 在这个示例中,header通过隐式的网格线名称设置其位置。
 
@@ -708,7 +708,7 @@ grid-column-end:   sidebar-end;
     grid-column-start: 2;
 }
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c30.jpg">
+<img class="br10" src="/2018/05/18/css3-grid/c30.jpg">
 
 [demo](https://codepen.io/Frank_/pen/PRbaeX?editors=1100)
 
@@ -725,7 +725,7 @@ item-b列的开始是2，
 导致item-a在item-b之上。
 当然 ，我们可以设置item-b:z-index:2
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c30.jpg">
+<img class="br10" src="/2018/05/18/css3-grid/c30.jpg">
 
 
 
@@ -770,7 +770,7 @@ last baseline
   // align-items: stretch;
 }
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c31.jpg">
+<img class="br10" src="/2018/05/18/css3-grid/c31.jpg">
 
 [demo](https://codepen.io/Frank_/pen/VXPQgQ?editors=1100)
 
@@ -799,7 +799,7 @@ last baseline
     align-self: center ;
 }
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c32.jpg">
+<img class="br10" src="/2018/05/18/css3-grid/c32.jpg">
 
 [demo](https://codepen.io/Frank_/pen/OvWvGM?editors=1100)
 
@@ -839,7 +839,7 @@ last baseline
   align-content: space-evenly;
 }
 ```
-<img class="br10" src="/2018/04/08/css3-grid/c33.jpg">
+<img class="br10" src="/2018/05/18/css3-grid/c33.jpg">
 
 [demo](https://codepen.io/Frank_/pen/NYdMva?editors=1100)
 
