@@ -1,17 +1,17 @@
 # Icon
 favicon: /favicon.ico
 # SEO
-keywords: Hexo, Gruntjs, Nodejs, Reactjs, Vuejs
+keywords: 读书, 札记, 笔记, 手记, 前端开发
 # Header
 # https://picsum.photos/1920/800/?random
 page_background: /img/
 page_menu_button: dark
 post_background: /img/
 post_menu_button: light
-title_plancehold: 随笔
+title_plancehold: 札记
 author:
   head: https://avatars2.githubusercontent.com/u/5219949?v=4&s=460
-  signature: Never put off what you can do today until tomorrow.
+  signature: 或学而有得，或思而有得，辄札记之。
 navication:
   - name: Github
     link: https://github.com/consolejs
@@ -24,7 +24,7 @@ content_width: 800
 social:
   - name: Github
     icon: github
-    link: #
+    link: /
   # - name: Weibo
   #   icon: weibo
   #   link: https://weibo.com/heqibang
@@ -35,7 +35,7 @@ social:
 # Comment From 来必力
 # https://livere.com/
 comments:
-  enable: false
+  enable: true
   siteName: livere
 # Copyright
 copyright:
