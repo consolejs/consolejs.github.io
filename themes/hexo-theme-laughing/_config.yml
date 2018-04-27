@@ -35,7 +35,7 @@ social:
 # Comment From 来必力
 # https://livere.com/
 comments:
-  enable: true
+  enable: false
   siteName: livere
 # Copyright
 copyright:
