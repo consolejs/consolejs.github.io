@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="读书, 札记, 笔记, 手记, 前端开发"><title>关于 Css3 Flex - 城池札记</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com/consolejs"><span>Github</span></a></li><li><a href="/hello.html"><span>Hello</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="/img/3.jpg"><div class="post-title"><h1 class="title">关于 Css3 Flex</h1><ul class="meta"><li><i class="icon icon-author"></i>城池</li><li><i class="icon icon-calendar"></i>August 28, 2017</li></ul></div></div><div class="article-content" style="max-width:800px"><p>布局的传统解决方案，基于盒状模型，依赖 display属性 + position属性 + float属性。它对于那些特殊布局非常不方便，比如，<a href="https://css-tricks.com/centering-css-complete-guide/" target="_blank" rel="external">垂直居中</a>就不容易实现。</p>
+<h2 id="W3C提出的一种新的方案"><a href="#W3C提出的一种新的方案" class="headerlink" title="W3C提出的一种新的方案"></a>W3C提出的一种新的方案</h2><h3 id="Flex布局，可以简便、完整、响应式地实现各种页面布局。"><a href="#Flex布局，可以简便、完整、响应式地实现各种页面布局。" class="headerlink" title="Flex布局，可以简便、完整、响应式地实现各种页面布局。"></a>Flex布局，可以简便、完整、响应式地实现各种页面布局。</h3><p><img src="/2017/08/28/css3-flex/c01.png"></p>
+<h2 id="浏览器支持"><a href="#浏览器支持" class="headerlink" title="浏览器支持"></a>浏览器支持</h2><p><img class="br10" src="https://i.loli.net/2017/08/28/59a3e6836832a.jpg"></p>
+<h1 id="Flex"><a href="#Flex" class="headerlink" title="Flex"></a>Flex</h1><p>Flexible Box的缩写，意为”弹性布局”，<br>用来为盒状模型提供最大的灵活性。</p>
+<p><strong>任何一个容器都可以指定为Flex布局。</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">display</span>: flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="「inline-flex」-与-inline-block"><a href="#「inline-flex」-与-inline-block" class="headerlink" title="「inline-flex」 与 inline-block"></a>「inline-flex」 与 inline-block</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.flex</span>,</div><div class="line">    <span class="selector-class">.inline-flex</span>&#123;</div><div class="line">        <span class="attribute">width</span>:<span class="number">100px</span>;</div><div class="line">        <span class="attribute">height</span>:<span class="number">50px</span>;</div><div class="line">        <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#000</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.flex</span>&#123;</div><div class="line">        <span class="attribute">display</span>:flex;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.inline-flex</span>&#123;</div><div class="line">        <span class="attribute">display</span>:inline-flex;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p><a href="http://www.oxxostudio.tw/demo/201501/css-flexbox-demo1.html" target="_blank" rel="external">demo</a></p>
+<h3 id="Webkit内核的浏览器，必须加上-webkit前缀。"><a href="#Webkit内核的浏览器，必须加上-webkit前缀。" class="headerlink" title="Webkit内核的浏览器，必须加上-webkit前缀。"></a>Webkit内核的浏览器，必须加上<code>-webkit</code>前缀。</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">display</span>: -webkit-flex; <span class="comment">/* Safari */</span></div><div class="line">    <span class="attribute">display</span>: flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p> 注意，设为Flex布局以后，子元素的float、clear和vertical-align属性将失效。</p>
+</blockquote>
+<ul>
+<li>采用Flex布局的元素，称为Flex容器，简称”容器”</li>
+<li>它的所有子元素自动成为容器成员，称为Flex项目，简称”项目”</li>
+</ul>
+<hr>
+<p><img class="br10" src="/2017/08/28/css3-flex/css09.png"></p>
+<blockquote>
+<p>flex布局发生在<code>父容器</code>和<code>子容器</code>之间。父容器需要有flex的环境(display:flex;)，子容器才能根据自身的属性来布局，简单的说，就是瓜分父容器的空间。相反就是说如果父容器没有flex的环境，那么子容器就无法使用flex的规则来划分父容器的空间。</p>
+</blockquote>
+<ul>
+<li>水平的主轴main axis和垂直的交叉轴（cross axis）</li>
+<li>主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end</li>
+<li>交叉轴的开始位置叫做cross start，结束位置叫做cross end</li>
+<li>项目默认沿主轴排列</li>
+<li>单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size</li>
+</ul>
+<hr>
+<h2 id="容器的属性-91-6个-93"><a href="#容器的属性-91-6个-93" class="headerlink" title="容器的属性 &#91;6个&#93;"></a>容器的属性 &#91;<strong>6个</strong>&#93;</h2><hr>
+<ul>
+<li><span class="green">flex-direction</span></li>
+<li><span class="green">flex-wrap</span></li>
+<li><span class="green3">flex-flow</span></li>
+<li><span class="blue">justify-content</span></li>
+<li><span class="blue">align-items</span></li>
+<li><span class="yellow">align-content</span></li>
+</ul>
+<h2 id="A1-flex-direction"><a href="#A1-flex-direction" class="headerlink" title="(A1) flex-direction"></a>(A1) flex-direction</h2><h3 id="「容器属性」决定主轴的方向（即项目的排列方向）"><a href="#「容器属性」决定主轴的方向（即项目的排列方向）" class="headerlink" title="「容器属性」决定主轴的方向（即项目的排列方向）"></a>「容器属性」决定主轴的方向（即项目的排列方向）</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">    <span class="attribute">flex-direction</span>: row | row-reverse | column | column-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>row（默认值）：主轴为水平方向，起点在左端。</li>
+<li>row-reverse：主轴为水平方向，起点在右端。</li>
+<li>column：主轴为垂直方向，起点在上沿。</li>
+<li>column-reverse：主轴为垂直方向，起点在下沿。</li>
+</ul>
+<hr>
+<p><img class="br10" src="/2017/08/28/css3-flex/css12.png"></p>
+<h3 id="Flex-direction-Demo"><a href="#Flex-direction-Demo" class="headerlink" title="Flex-direction Demo"></a>Flex-direction Demo</h3><hr>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">    <span class="attribute">flex-direction</span>: row | row-reverse | column | column-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://www.oxxostudio.tw/demo/201501/css-flexbox-demo2.html" target="_blank" rel="external">demo</a></p>
+<h2 id="A2-flex-wrap"><a href="#A2-flex-wrap" class="headerlink" title="(A2) flex-wrap"></a>(A2) flex-wrap</h2><p>###「容器属性」定义如果一条轴线排不下，如何换行 </p>
+<p>[默认情况下，项目都排在一条轴线上]</p>
+<p>可取<strong>3</strong>个值</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img class="br10" src="/2017/08/28/css3-flex/c03.png"></p>
+<h3 id="（1）nowrap（默认）：不换行"><a href="#（1）nowrap（默认）：不换行" class="headerlink" title="（1）nowrap（默认）：不换行"></a>（1）nowrap（默认）：不换行</h3><hr>
+<p><img class="br10" src="/2017/08/28/css3-flex/c04.png"></p>
+<h3 id="2）wrap：换行，第一行在上方"><a href="#2）wrap：换行，第一行在上方" class="headerlink" title="(2）wrap：换行，第一行在上方"></a>(2）wrap：换行，第一行在上方</h3><hr>
+<p><img class="br10" src="/2017/08/28/css3-flex/c05.jpg"></p>
+<h3 id="3-wrap-reverse：换行，第一行在下方"><a href="#3-wrap-reverse：换行，第一行在下方" class="headerlink" title="(3) wrap-reverse：换行，第一行在下方"></a>(3) wrap-reverse：换行，第一行在下方</h3><hr>
+<p><img class="br10" src="/2017/08/28/css3-flex/c06.jpg"></p>
+<p><a href="http://www.oxxostudio.tw/demo/201501/css-flexbox-demo7.html" target="_blank" rel="external">demo</a>  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.nowrap</span>&#123;</div><div class="line">    <span class="attribute">flex-wrap</span>:nowrap;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.wrap</span>&#123;</div><div class="line">    <span class="attribute">flex-wrap</span>:wrap;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.wrap-reverse</span>&#123;</div><div class="line">    <span class="attribute">flex-wrap</span>:wrap-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="A3-flex-flow"><a href="#A3-flex-flow" class="headerlink" title="(A3) flex-flow"></a>(A3) flex-flow</h2><h3 id="「容器属性」是flex-direction和flex-wrap的简写形式"><a href="#「容器属性」是flex-direction和flex-wrap的简写形式" class="headerlink" title="「容器属性」是flex-direction和flex-wrap的简写形式"></a>「容器属性」是flex-direction和flex-wrap的简写形式</h3><p>[默认值为<strong>row</strong> <strong>nowrap</strong>]</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">    <span class="attribute">flex-flow</span>: flex-direction || flex-wrap;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="A4-justify-content"><a href="#A4-justify-content" class="headerlink" title="(A4) justify-content"></a>(A4) justify-content</h2><h3 id="「容器属性」定义了项目在主轴上的对齐方式"><a href="#「容器属性」定义了项目在主轴上的对齐方式" class="headerlink" title="「容器属性」定义了项目在主轴上的对齐方式"></a>「容器属性」定义了项目在主轴上的对齐方式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">    <span class="attribute">justify-content</span>: flex-start | flex-end | center | space-between | space-around;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="它可能取5个值，具体对齐方式与轴的方向有关"><a href="#它可能取5个值，具体对齐方式与轴的方向有关" class="headerlink" title="它可能取5个值，具体对齐方式与轴的方向有关"></a>它可能取<strong>5</strong>个值，具体对齐方式与<strong>轴的方向</strong>有关</h2><hr>
+<ul>
+<li>flex-start（默认值）：左对齐</li>
+<li>flex-end：右对齐</li>
+<li>center： 居中</li>
+<li>space-between：两端对齐，项目之间的间隔都相等</li>
+<li>space-around：每个项目两侧的间隔相等，所以项目之间的间隔比项目与边框的间隔大一倍</li>
+</ul>
+<h2 id="下面假设主轴从左到右"><a href="#下面假设主轴从左到右" class="headerlink" title="[下面假设主轴从左到右]"></a>[下面假设主轴<strong>从左到右</strong>]</h2><p><img class="br10" src="/2017/08/28/css3-flex/c07.png"></p>
+<p><a href="http://www.oxxostudio.tw/demo/201501/css-flexbox-demo3.html" target="_blank" rel="external">demo</a>  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.flex-start</span>&#123;</div><div class="line">    <span class="attribute">justify-content</span>:flex-start;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.flex-end</span>&#123;</div><div class="line">    <span class="attribute">justify-content</span>:flex-end;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.center</span>&#123;</div><div class="line">    <span class="attribute">justify-content</span>:center;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.space-between</span>&#123;</div><div class="line">    <span class="attribute">justify-content</span>:space-between;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.space-around</span>&#123;</div><div class="line">    <span class="attribute">justify-content</span>:space-around;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://www.oxxostudio.tw/demo/201501/css-flexbox-demo3.html" target="_blank" rel="external">demo</a></p>
+<h2 id="A5-align-items"><a href="#A5-align-items" class="headerlink" title="(A5) align-items"></a>(A5) align-items</h2><h3 id="「容器属性」定义项目在交叉轴上如何对齐"><a href="#「容器属性」定义项目在交叉轴上如何对齐" class="headerlink" title="「容器属性」定义项目在交叉轴上如何对齐"></a>「容器属性」定义项目在交叉轴上如何对齐</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">        <span class="attribute">align-items</span>: flex-start | flex-end | center | baseline | stretch;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h2 id="它可能取5个值，具体对齐方式与交叉轴有关"><a href="#它可能取5个值，具体对齐方式与交叉轴有关" class="headerlink" title="它可能取5个值，具体对齐方式与交叉轴有关"></a>它可能取<strong>5</strong>个值，具体对齐方式与<strong>交叉轴</strong>有关</h2><hr>
+<ul>
+<li>flex-start：交叉轴的起点对齐</li>
+<li>flex-end：交叉轴的终点对齐</li>
+<li>center：交叉轴的中点对齐</li>
+<li>baseline: 项目的第一行文字的基线对齐</li>
+<li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度</li>
+</ul>
+<h2 id="下面假设交叉轴从上到下"><a href="#下面假设交叉轴从上到下" class="headerlink" title="[下面假设交叉轴从上到下]"></a>[下面假设交叉轴<strong>从上到下</strong>]</h2><p><img class="br10" src="/2017/08/28/css3-flex/c08.png"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">        <span class="attribute">align-items</span>: flex-start | flex-end | center | stretch | baseline;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p><br><a href="http://www.oxxostudio.tw/demo/201501/css-flexbox-demo4.html" target="_blank" rel="external">demo</a>  </p>
+<h2 id="A6-align-content"><a href="#A6-align-content" class="headerlink" title="(A6) align-content"></a>(A6) align-content</h2><h3 id="「容器属性」定义了多根轴线的对齐方式"><a href="#「容器属性」定义了多根轴线的对齐方式" class="headerlink" title="「容器属性」定义了多根轴线的对齐方式"></a>「容器属性」定义了多根轴线的对齐方式</h3><hr>
+<h5 id="如果项目只有一根轴线，该属性不起作用"><a href="#如果项目只有一根轴线，该属性不起作用" class="headerlink" title="[如果项目只有一根轴线，该属性不起作用]"></a><strong>[如果项目只有一根轴线，该属性不起作用]</strong></h5><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">       <span class="attribute">align-content</span>: flex-start | flex-end | center | space-between | space-around | stretch;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h2 id="它可能取6个值"><a href="#它可能取6个值" class="headerlink" title="它可能取6个值"></a>它可能取<strong>6</strong>个值</h2><ul>
+<li>flex-start：与交叉轴的起点对齐</li>
+<li>flex-end：与交叉轴的终点对齐</li>
+<li>center：与交叉轴的中点对齐</li>
+<li>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布</li>
+<li>space-around：每根轴线两侧的间隔都相等,所以轴线之间的间隔比轴线与边框的间隔大一倍</li>
+<li>stretch（默认值）：轴线占满整个交叉轴</li>
+</ul>
+<h3 id="如果项目只有一根轴线，该属性不起作用-1"><a href="#如果项目只有一根轴线，该属性不起作用-1" class="headerlink" title="如果项目只有一根轴线，该属性不起作用"></a><span class="text-danger">如果项目只有一根轴线，该属性不起作用</span></h3><hr>
+<p><img class="br10" src="/2017/08/28/css3-flex/c09.png"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">    <span class="attribute">align-content</span>: flex-start | flex-end | center | space-between | space-around | stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://www.oxxostudio.tw/demo/201501/css-flexbox-demo6.html" target="_blank" rel="external">demo</a>  </p>
+<p>##项目的属性 &#91;<strong>6个</strong>&#93;</p>
+<hr>
+<ul>
+<li><span class="blue">order</span></li>
+<li><span class="green2">flex-grow</span></li>
+<li><span class="green2">flex-basis</span></li>
+<li><span class="green2">flex-shrink</span></li>
+<li><span class="text-success">flex</span></li>
+<li><span class="yellow">align-self</span></li>
+</ul>
+<h2 id="B1-order"><a href="#B1-order" class="headerlink" title="(B1) order"></a>(B1) order</h2><h3 id="「项目属性」定义项目的排列顺序"><a href="#「项目属性」定义项目的排列顺序" class="headerlink" title="「项目属性」定义项目的排列顺序"></a>「项目属性」定义项目的排列顺序</h3><hr>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">        <span class="attribute">order</span>: <span class="number">1</span>;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h3 id="数值越小-排列越靠前，默认为0"><a href="#数值越小-排列越靠前，默认为0" class="headerlink" title="[数值越小,排列越靠前，默认为0]"></a>[<strong>数值越小,排列越靠前，默认为0</strong>]</h3><hr>
+<p><img class="br10" src="/2017/08/28/css3-flex/css34.png"></p>
+<h3 id="order-Demo"><a href="#order-Demo" class="headerlink" title="order Demo"></a>order Demo</h3><hr>
+<p><a href="http://www.oxxostudio.tw/demo/201501/css-flexbox-demo8.html" target="_blank" rel="external">demo</a></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.order1</span>&#123;</div><div class="line">        <span class="attribute">order</span>:<span class="number">1</span>;</div><div class="line">        <span class="attribute">background</span>:<span class="number">#c00</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.order2</span>&#123;</div><div class="line">        <span class="attribute">order</span>:<span class="number">2</span>;</div><div class="line">        <span class="attribute">background</span>:<span class="number">#069</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.order3</span>&#123;</div><div class="line">        <span class="attribute">order</span>:<span class="number">3</span>;</div><div class="line">        <span class="attribute">background</span>:<span class="number">#095</span>;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p><a href="http://www.oxxostudio.tw/demo/201501/css-flexbox-demo8.html" target="_blank" rel="external">demo</a></p>
+<h2 id="B2-flex-grow"><a href="#B2-flex-grow" class="headerlink" title="(B2) flex-grow"></a>(B2) flex-grow</h2><h3 id="「项目属性」定义项目的放大比例"><a href="#「项目属性」定义项目的放大比例" class="headerlink" title="「项目属性」定义项目的放大比例"></a>「项目属性」定义项目的放大比例</h3><hr>
+<h4 id="默认为0-即如果存在剩余空间，也不瓜分"><a href="#默认为0-即如果存在剩余空间，也不瓜分" class="headerlink" title="[默认为0,即如果存在剩余空间，也不瓜分]"></a>[<strong>默认为0,即如果存在剩余空间，也不瓜分</strong>]</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.   <span class="selector-tag">item</span> &#123;</div><div class="line">        <span class="attribute">flex-grow</span>: <span class="number">0</span>; <span class="comment">/* default 0 */</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h3 id="flex-grow-Demo"><a href="#flex-grow-Demo" class="headerlink" title="flex-grow Demo"></a>flex-grow Demo</h3><hr>
+<p><div class="columns-2"><br>    <p style="font-size: 18px;text-align:left;">如果所有项目的flex-grow属性都为1，<br>则它们将等分剩余空间（如果有的话）</p><br>    <p style="font-size: 18px;text-align:left;">如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍</p><br></div></p>
+<p><pre><br>    <code class="css pl10"><br>    .item {<br>        flex-grow: 0; /<em> default 0 </em>/<br>    }<br>    </code></pre></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p><a href="https://codepen.io/Frank_/pen/EmEPQm?editors=1100" target="_blank" rel="external">demo</a></p>
+<p>[slide]</p>
+<p>##(B3) flex-basis </p>
+<p>###「项目属性」定义了在分配多余空间之前，项目占据的主轴空间（main size）</p>
+<h3 id="浏览器根据这个属性，计算主轴是否有多余空间"><a href="#浏览器根据这个属性，计算主轴是否有多余空间" class="headerlink" title="[浏览器根据这个属性，计算主轴是否有多余空间]"></a>[<strong>浏览器根据这个属性，计算主轴是否有多余空间</strong>]</h3><hr>
+<h4 id="它的默认值为auto，即项目的本来大小"><a href="#它的默认值为auto，即项目的本来大小" class="headerlink" title="[它的默认值为auto，即项目的本来大小]"></a>[<strong>它的默认值为auto，即项目的本来大小</strong>]</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">    <span class="attribute">flex-basis</span>: <span class="number">1</span> | auto; <span class="comment">/* default auto */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="flex-basis-Demo"><a href="#flex-basis-Demo" class="headerlink" title="flex-basis Demo"></a>flex-basis Demo</h3><hr>
+<h4 id="我们通过案例来解释"><a href="#我们通过案例来解释" class="headerlink" title="[我们通过案例来解释]"></a>[<strong>我们通过案例来解释</strong>]</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">    <span class="attribute">flex-basis</span>: <span class="number">1</span> | auto; <span class="comment">/* default auto */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p><a href="https://codepen.io/Frank_/pen/VbXjxm?editors=1100" target="_blank" rel="external">demo</a></p>
+<blockquote>
+<p>上面讲的<span class="green">flex-grow</span>、<span class="green">flex-basis</span>都是剩余空间的分配。但是，你有没有想过还有没有其他的情况呢？可以发现，上面讲的例子item1 item2 item3的宽度总和都是<code>没有超过</code>父容器的宽度的。 那如果三个子容器的<code>宽度和超过</code>父容器的宽度呢？那还有剩余空间可以分配吗，此时浏览器又是怎么处理呢？请看下面：</p>
+</blockquote>
+<h2 id="B4-flex-shrink"><a href="#B4-flex-shrink" class="headerlink" title="(B4) flex-shrink"></a>(B4) flex-shrink</h2><h3 id="「项目属性」定义了项目的缩小比例，默认为1"><a href="#「项目属性」定义了项目的缩小比例，默认为1" class="headerlink" title="「项目属性」定义了项目的缩小比例，默认为1"></a>「项目属性」定义了项目的缩小比例，默认为1</h3><hr>
+<h4 id="即如果空间不足，该项目将缩小"><a href="#即如果空间不足，该项目将缩小" class="headerlink" title="[即如果空间不足，该项目将缩小]"></a>[<strong>即如果空间不足，该项目将缩小</strong>]</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">    <span class="attribute">flex-shrink</span>: <span class="number">1</span>; <span class="comment">/* default 1 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="flex-shrink-Demo"><a href="#flex-shrink-Demo" class="headerlink" title="flex-shrink Demo"></a>flex-shrink Demo</h3><hr>
+<h4 id="不太好理解-我们通过案例来解释"><a href="#不太好理解-我们通过案例来解释" class="headerlink" title="[不太好理解 我们通过案例来解释]"></a>[<strong>不太好理解 我们通过案例来解释</strong>]</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">    <span class="attribute">flex-grow</span>: <span class="number">1</span>; <span class="comment">/* default 0 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p><a href="https://codepen.io/Frank_/pen/LydNrv?editors=1100" target="_blank" rel="external">demo</a></p>
+<h2 id="B5-flex"><a href="#B5-flex" class="headerlink" title="(B5) flex"></a>(B5) flex</h2><h3 id="「项目属性」简写，默认值为-0-1-auto"><a href="#「项目属性」简写，默认值为-0-1-auto" class="headerlink" title="「项目属性」简写，默认值为: 0 1 auto"></a>「项目属性」简写，默认值为: <strong>0 1 auto</strong></h3><h3 id="flex-grow-flex-shrink-和-flex-basis"><a href="#flex-grow-flex-shrink-和-flex-basis" class="headerlink" title="flex-grow,flex-shrink 和 flex-basis"></a><span class="green">flex-grow</span>,<span class="green">flex-shrink</span> 和 <span class="green">flex-basis</span></h3><h3 id="后两个属性可选"><a href="#后两个属性可选" class="headerlink" title="[后两个属性可选]"></a>[<strong>后两个属性可选</strong>]</h3><hr>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">    <span class="attribute">flex</span>: none | [ &lt;<span class="string">'flex-grow'</span>&gt; &lt;<span class="string">'flex-shrink'</span>&gt;? || &lt;<span class="string">'flex-basis'</span>&gt; ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="该属性有两个快捷值"><a href="#该属性有两个快捷值" class="headerlink" title="该属性有两个快捷值"></a>该属性有两个快捷值</h3><hr>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">    <span class="attribute">flex</span>: none | [ &lt;<span class="string">'flex-grow'</span>&gt; &lt;<span class="string">'flex-shrink'</span>&gt;? || &lt;<span class="string">'flex-basis'</span>&gt; ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><span class="yellow">auto</span> <span class="green">(1 1 auto)</span></li>
+<li><span class="yellow">none</span> <span class="green">(0 0 auto)</span></li>
+</ul>
+<h3 id="flex-Demo"><a href="#flex-Demo" class="headerlink" title="flex Demo"></a>flex Demo</h3><hr>
+<h4 id="建议优先使用这个属性-因为浏览器会推算相关值"><a href="#建议优先使用这个属性-因为浏览器会推算相关值" class="headerlink" title="[建议优先使用这个属性,因为浏览器会推算相关值]"></a>[<strong>建议优先使用这个属性,因为浏览器会推算相关值</strong>]</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">    <span class="attribute">flex</span>: &lt;<span class="string">'flex-grow'</span>&gt; &lt;<span class="string">'flex-shrink'</span>&gt; &lt;<span class="string">'flex-basis'</span>&gt;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.item1</span>&#123;</div><div class="line">    <span class="attribute">flex</span>:<span class="number">1</span> <span class="number">2</span> <span class="number">200px</span>;</div><div class="line">    <span class="attribute">background</span>:<span class="number">#c00</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.item2</span>&#123;</div><div class="line">    <span class="attribute">flex</span>:<span class="number">2</span> <span class="number">1</span> <span class="number">100px</span>;</div><div class="line">    <span class="attribute">background</span>:<span class="number">#069</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://www.oxxostudio.tw/demo/201501/css-flexbox-demo9.html" target="_blank" rel="external">demo</a></p>
+<h2 id="B6-align-self"><a href="#B6-align-self" class="headerlink" title="(B6) align-self"></a>(B6) align-self</h2><h3 id="「项目属性」允许单个项目有与其他项目不一样的对齐方式"><a href="#「项目属性」允许单个项目有与其他项目不一样的对齐方式" class="headerlink" title="「项目属性」允许单个项目有与其他项目不一样的对齐方式"></a>「项目属性」允许单个项目有与其他项目不一样的对齐方式</h3><h3 id="可覆盖align-items属性"><a href="#可覆盖align-items属性" class="headerlink" title="[可覆盖align-items属性]"></a>[<strong>可覆盖align-items属性</strong>]</h3><hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">默认值为 auto, 表示继承父元素的align-items属性</div><div class="line"></div><div class="line">如果没有父元素，则等同于stretch</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">    <span class="attribute">align-self</span>: auto | flex-start | flex-end | center | baseline | stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="可取6个值，除了auto，其他都与align-items属性完全一致"><a href="#可取6个值，除了auto，其他都与align-items属性完全一致" class="headerlink" title="可取6个值，除了auto，其他都与align-items属性完全一致"></a><span class="text-danger">可取6个值，除了auto，其他都与align-items属性完全一致</span></h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">    <span class="attribute">align-self</span>: auto | flex-start | flex-end | center | baseline | stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>[slide]<br><img class="br10" src="/2017/08/28/css3-flex/css46.png"></p>
+<h3 id="align-self-Demo"><a href="#align-self-Demo" class="headerlink" title="align-self Demo"></a>align-self Demo</h3><hr>
+<h4 id="建议优先使用这个属性-因为浏览器会推算相关值-1"><a href="#建议优先使用这个属性-因为浏览器会推算相关值-1" class="headerlink" title="[建议优先使用这个属性,因为浏览器会推算相关值]"></a>[<strong>建议优先使用这个属性,因为浏览器会推算相关值</strong>]</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item2</span>&#123;</div><div class="line">    <span class="attribute">align-self</span>:baseline;</div><div class="line">    <span class="attribute">line-height</span>: <span class="number">30px</span>;</div><div class="line">    <span class="attribute">background</span>:<span class="number">#095</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><a href="http://www.oxxostudio.tw/demo/201501/css-flexbox-demo5.html" target="_blank" rel="external">demo</a></p>
+<blockquote>
+<p>容器的属性 &#91;6个&#93;</p>
+</blockquote>
+<ul>
+<li>flex-direction</li>
+<li>flex-wrap</li>
+<li>flex-flow</li>
+<li>justify-content</li>
+<li>align-items</li>
+<li>align-content</li>
+</ul>
+<blockquote>
+<p>项目的属性 &#91;6个&#93; </p>
+</blockquote>
+<ul>
+<li>order</li>
+<li>flex-grow</li>
+<li>flex-basis</li>
+<li>flex-shrink</li>
+<li>flex</li>
+<li>align-self</li>
+</ul>
+<p><br></p>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="http://www.oxxostudio.tw/articles/201501/css-flexbox.html" target="_blank" rel="external">http://www.oxxostudio.tw/articles/201501/css-flexbox.html</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></li>
+<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="external">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes</a></li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>声明:本资料仅供学习交流，严禁使用于任何商业用途! 相关资料参考自<a href="https://developer.mozilla.org/en/" target="_blank" rel="external">mdn</a>等开发者网站或技术大牛<a href="http://www.ruanyifeng.com/blog/" target="_blank" rel="external">阮一峰</a>、<a href="http://www.oxxostudio.tw/articles/201405/about-me.html" target="_blank" rel="external">oxxo</a>等博客内容。 如需转载，转载请注明出处。</p>
+</blockquote>
+<p><br></p>
+<h3 id="完"><a href="#完" class="headerlink" title="完."></a>完.</h3></div><div class="article-meta" style="max-width:800px"><div class="tags"><i class="icon icon-tag"></i><ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flex/">flex</a><span class="tag-list-count">1</span></li></ul></div><div class="categories"><i class="icon icon-category"></i><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">2</span></li></ul></div></div><div class="article-comment comm-pop" style="max-width:800px;padding:0 16px;margin:0 auto"><p style="margin:0;padding:0 0 0 8px;color:#687e8b;">注意言辞，我可以在后台删评论喔~ 🙃🙃</p></div><div class="article-comment" style="max-width:800px;padding:0 16px"><div id="lv-container" data-id="city" data-uid="MTAyMC8zNTg3My8xMjQwOQ=="></div><script>(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');</script><noscript>为正常使用来必力评论功能请激活JavaScript</noscript></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/2018/02/21/qianguize/"><i class="icon icon-arror-left"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="/" title="Github"><i class="icon icon-github"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2018 城池札记</p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>
