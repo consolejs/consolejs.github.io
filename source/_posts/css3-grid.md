@@ -859,7 +859,8 @@ last baseline
 
 <br/>
 
-> 声明:本资料仅供学习交流，严禁使用于任何商业用途!  相关资料参考自以上备注, 特此感谢！ 如需转载，转载请注明出处。
+> 声明:本资料仅供学习交流，严禁使用于任何商业用途! 
+相关资料参考自[w3cplus](https://www.w3cplus.com/css/learncssgrid.html)、[css88](http://www.css88.com/archives/8510)、[css-tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)等博客内容。 如需转载，转载请注明出处。
 
 
 <br/>
