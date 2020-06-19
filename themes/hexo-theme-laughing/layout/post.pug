@@ -1,0 +1,48 @@
+extends ./_partial/layout.pug
+block content
+  include ./_partial/post_header.pug
+  .article-content(style='max-width:'+ theme.content_width +'px')
+    if page.photos && page.photos.length
+      div
+        each photo in page.photos
+          a.article-gallery-img.fancybox(href=photo)
+            img(src=photo)
+    | !{page.content}
+  .article-meta(style='max-width:'+ theme.content_width +'px')
+    if page.tags && page.tags.length
+      .tags
+        i.icon.icon-tag
+        | !{list_tags(page.tags)}
+    if page.tags && page.categories.length
+      .categories
+        i.icon.icon-category
+        | !{list_categories(page.categories)}
+  if theme.comments.enable
+    .article-comment.comm-pop(style='max-width:'+ theme.content_width +'px;'+'padding:0 16px;margin:0 auto;')
+      p(style='margin:0;padding:0 0 0 8px;color:#687e8b;').
+        注意言辞，我可以在后台删评论喔~ 🙃🙃
+    .article-comment(style='max-width:'+ theme.content_width +'px;'+'padding:0 16px')
+      #lv-container(data-id="city" data-uid="MTAyMC8zNTg3My8xMjQwOQ==")
+      script.
+        (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+            if (typeof LivereTower === 'function') { return; }
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+      noscript.
+        为正常使用来必力评论功能请激活JavaScript
+  ul.navication
+    li.home
+      a(href="/")
+        i.icon.icon-home
+    if page.prev && page.prev.path
+      li
+        a(href=url_for(page.prev.path))
+          i.icon.icon-arror-left
+    if page.next && page.next.path
+      li
+        a(href=url_for(page.next.path))
+          i.icon.icon-arror-right
