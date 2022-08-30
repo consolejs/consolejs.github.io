@@ -8,6 +8,16 @@ tags:
 - 历史
 ---
 
+<style type="text/css">
+    .br10{border-radius: 6px;}
+</style>
+
+<img class="br10 k-lazy" src="/2018/02/21/qianguize/q0.jpg">
+
+<!-- more -->
+
+<br />
+
 
 > __云南人民出版社__
 > 豆瓣评分: **`8.3`**
