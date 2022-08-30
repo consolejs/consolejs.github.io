@@ -1,11 +1,11 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="读书, 札记, 笔记, 手记, 前端开发"><title>关于 Css3 Flex - 有得札记</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com/consolejs"><span>Github</span></a></li><li><a href="/hello.html"><span>Hello</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="/img/4.jpg"><div class="post-title"><h1 class="title">关于 Css3 Flex</h1><ul class="meta"><li><i class="icon icon-author"></i>学思有得</li><li><i class="icon icon-calendar"></i>August 28, 2017</li></ul></div></div><div class="article-content" style="max-width:800px"><style type="text/css">
+<!DOCTYPE html><html lang="zh-cn"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description"><meta name="keywords" content="读书, 札记, 笔记, 手记, 前端开发"><title>关于 Css3 Flex - 有得札记</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com/consolejs"><span>Github</span></a></li><li><a href="/hello.html"><span>Hello</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="/img/5.jpg"><div class="post-title"><h1 class="title">关于 Css3 Flex</h1><ul class="meta"><li><i class="icon icon-author"></i>学思有得</li><li><i class="icon icon-calendar"></i>August 28, 2017</li></ul></div></div><div class="article-content" style="max-width:800px"><style type="text/css">
     .br10{border-radius: 6px;}
 </style>
 
 <p><img class="br10 k-lazy" src="/2017/08/28/css3-flex/c01.png"></p>
 <a id="more"></a>
 <p>布局的传统解决方案，基于盒状模型，依赖 display属性 + position属性 + float属性。它对于那些特殊布局非常不方便，比如，<a href="https://css-tricks.com/centering-css-complete-guide/" target="_blank" rel="noopener">垂直居中</a>就不容易实现。</p>
-<h2 id="W3C提出的一种新的方案"><a href="#W3C提出的一种新的方案" class="headerlink" title="W3C提出的一种新的方案"></a>W3C提出的一种新的方案</h2><h3 id="Flex布局，可以简便、完整、响应式地实现各种页面布局。"><a href="#Flex布局，可以简便、完整、响应式地实现各种页面布局。" class="headerlink" title="Flex布局，可以简便、完整、响应式地实现各种页面布局。"></a>Flex布局，可以简便、完整、响应式地实现各种页面布局。</h3><h2 id="浏览器支持"><a href="#浏览器支持" class="headerlink" title="浏览器支持"></a>浏览器支持</h2><p><img class="br10" src="/28/css3-flex/c101.jpg"></p>
+<h2 id="W3C提出的一种新的方案"><a href="#W3C提出的一种新的方案" class="headerlink" title="W3C提出的一种新的方案"></a>W3C提出的一种新的方案</h2><h3 id="Flex布局，可以简便、完整、响应式地实现各种页面布局。"><a href="#Flex布局，可以简便、完整、响应式地实现各种页面布局。" class="headerlink" title="Flex布局，可以简便、完整、响应式地实现各种页面布局。"></a>Flex布局，可以简便、完整、响应式地实现各种页面布局。</h3><h2 id="浏览器支持"><a href="#浏览器支持" class="headerlink" title="浏览器支持"></a>浏览器支持</h2><p><img class="br10 k-lazy" src="/2017/08/28/css3-flex/c101.jpg"></p>
 <h1 id="Flex"><a href="#Flex" class="headerlink" title="Flex"></a>Flex</h1><p>Flexible Box的缩写，意为”弹性布局”，<br>用来为盒状模型提供最大的灵活性。</p>
 <p><strong>任何一个容器都可以指定为Flex布局。</strong></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -20,7 +20,7 @@
 <li>它的所有子元素自动成为容器成员，称为Flex项目，简称”项目”</li>
 </ul>
 <hr>
-<p><img class="br10" src="/2017/08/28/css3-flex/css09.png"></p>
+<p><img class="br10 k-lazy" src="/2017/08/28/css3-flex/css09.png"></p>
 <blockquote>
 <p>flex布局发生在<code>父容器</code>和<code>子容器</code>之间。父容器需要有flex的环境(display:flex;)，子容器才能根据自身的属性来布局，简单的说，就是瓜分父容器的空间。相反就是说如果父容器没有flex的环境，那么子容器就无法使用flex的规则来划分父容器的空间。</p>
 </blockquote>
@@ -49,7 +49,7 @@
 <li>column-reverse：主轴为垂直方向，起点在下沿。</li>
 </ul>
 <hr>
-<p><img class="br10" src="/2017/08/28/css3-flex/css12.png"></p>
+<p><img class="br10 k-lazy" src="/2017/08/28/css3-flex/css12.png"></p>
 <h3 id="Flex-direction-Demo"><a href="#Flex-direction-Demo" class="headerlink" title="Flex-direction Demo"></a>Flex-direction Demo</h3><hr>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">flex-direction</span>: row | row-reverse | column | column-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><a href="http://www.oxxostudio.tw/demo/201501/css-flexbox-demo2.html" target="_blank" rel="noopener">demo</a></p>
@@ -57,13 +57,13 @@
 <p>[默认情况下，项目都排在一条轴线上]</p>
 <p>可取<strong>3</strong>个值</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img class="br10" src="/2017/08/28/css3-flex/c03.png"></p>
+<p><img class="br10 k-lazy" src="/2017/08/28/css3-flex/c03.png"></p>
 <h3 id="（1）nowrap（默认）：不换行"><a href="#（1）nowrap（默认）：不换行" class="headerlink" title="（1）nowrap（默认）：不换行"></a>（1）nowrap（默认）：不换行</h3><hr>
-<p><img class="br10" src="/2017/08/28/css3-flex/c04.png"></p>
+<p><img class="br10 k-lazy" src="/2017/08/28/css3-flex/c04.png"></p>
 <h3 id="2）wrap：换行，第一行在上方"><a href="#2）wrap：换行，第一行在上方" class="headerlink" title="(2）wrap：换行，第一行在上方"></a>(2）wrap：换行，第一行在上方</h3><hr>
-<p><img class="br10" src="/2017/08/28/css3-flex/c05.jpg"></p>
+<p><img class="br10 k-lazy" src="/2017/08/28/css3-flex/c05.jpg"></p>
 <h3 id="3-wrap-reverse：换行，第一行在下方"><a href="#3-wrap-reverse：换行，第一行在下方" class="headerlink" title="(3) wrap-reverse：换行，第一行在下方"></a>(3) wrap-reverse：换行，第一行在下方</h3><hr>
-<p><img class="br10" src="/2017/08/28/css3-flex/c06.jpg"></p>
+<p><img class="br10 k-lazy" src="/2017/08/28/css3-flex/c06.jpg"></p>
 <p><a href="http://www.oxxostudio.tw/demo/201501/css-flexbox-demo7.html" target="_blank" rel="noopener">demo</a>  </p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.nowrap</span>&#123;</span><br><span class="line">    <span class="attribute">flex-wrap</span>:nowrap;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wrap</span>&#123;</span><br><span class="line">    <span class="attribute">flex-wrap</span>:wrap;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wrap-reverse</span>&#123;</span><br><span class="line">    <span class="attribute">flex-wrap</span>:wrap-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="A3-flex-flow"><a href="#A3-flex-flow" class="headerlink" title="(A3) flex-flow"></a>(A3) flex-flow</h2><h3 id="「容器属性」是flex-direction和flex-wrap的简写形式"><a href="#「容器属性」是flex-direction和flex-wrap的简写形式" class="headerlink" title="「容器属性」是flex-direction和flex-wrap的简写形式"></a>「容器属性」是flex-direction和flex-wrap的简写形式</h3><p>[默认值为<strong>row</strong> <strong>nowrap</strong>]</p>
@@ -77,7 +77,7 @@
 <li>space-between：两端对齐，项目之间的间隔都相等</li>
 <li>space-around：每个项目两侧的间隔相等，所以项目之间的间隔比项目与边框的间隔大一倍</li>
 </ul>
-<h2 id="下面假设主轴从左到右"><a href="#下面假设主轴从左到右" class="headerlink" title="[下面假设主轴从左到右]"></a>[下面假设主轴<strong>从左到右</strong>]</h2><p><img class="br10" src="/2017/08/28/css3-flex/c07.png"></p>
+<h2 id="下面假设主轴从左到右"><a href="#下面假设主轴从左到右" class="headerlink" title="[下面假设主轴从左到右]"></a>[下面假设主轴<strong>从左到右</strong>]</h2><p><img class="br10 k-lazy" src="/2017/08/28/css3-flex/c07.png"></p>
 <p><a href="http://www.oxxostudio.tw/demo/201501/css-flexbox-demo3.html" target="_blank" rel="noopener">demo</a>  </p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flex-start</span>&#123;</span><br><span class="line">    <span class="attribute">justify-content</span>:flex-start;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.flex-end</span>&#123;</span><br><span class="line">    <span class="attribute">justify-content</span>:flex-end;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.center</span>&#123;</span><br><span class="line">    <span class="attribute">justify-content</span>:center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.space-between</span>&#123;</span><br><span class="line">    <span class="attribute">justify-content</span>:space-between;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.space-around</span>&#123;</span><br><span class="line">    <span class="attribute">justify-content</span>:space-around;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><a href="http://www.oxxostudio.tw/demo/201501/css-flexbox-demo3.html" target="_blank" rel="noopener">demo</a></p>
@@ -90,7 +90,7 @@
 <li>baseline: 项目的第一行文字的基线对齐</li>
 <li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度</li>
 </ul>
-<h2 id="下面假设交叉轴从上到下"><a href="#下面假设交叉轴从上到下" class="headerlink" title="[下面假设交叉轴从上到下]"></a>[下面假设交叉轴<strong>从上到下</strong>]</h2><p><img class="br10" src="/2017/08/28/css3-flex/c08.png"></p>
+<h2 id="下面假设交叉轴从上到下"><a href="#下面假设交叉轴从上到下" class="headerlink" title="[下面假设交叉轴从上到下]"></a>[下面假设交叉轴<strong>从上到下</strong>]</h2><p><img class="br10 k-lazy" src="/2017/08/28/css3-flex/c08.png"></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">        <span class="attribute">align-items</span>: flex-start | flex-end | center | stretch | baseline;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p><br><a href="http://www.oxxostudio.tw/demo/201501/css-flexbox-demo4.html" target="_blank" rel="noopener">demo</a>  </p>
 <h2 id="A6-align-content"><a href="#A6-align-content" class="headerlink" title="(A6) align-content"></a>(A6) align-content</h2><h3 id="「容器属性」定义了多根轴线的对齐方式"><a href="#「容器属性」定义了多根轴线的对齐方式" class="headerlink" title="「容器属性」定义了多根轴线的对齐方式"></a>「容器属性」定义了多根轴线的对齐方式</h3><hr>

@@ -25,7 +25,7 @@ tags:
 
 
 ## 浏览器支持
-<img class="br10" src="./c101.jpg">
+<img class="br10 k-lazy" src="/2017/08/28/css3-flex/c101.jpg">
 
 # Flex
 
@@ -78,7 +78,7 @@ Flexible Box的缩写，意为"弹性布局"，
 
 ---
 
-<img class="br10" src="/2017/08/28/css3-flex/css09.png">
+<img class="br10 k-lazy" src="/2017/08/28/css3-flex/css09.png">
 
 
 > flex布局发生在`父容器`和`子容器`之间。父容器需要有flex的环境(display:flex;)，子容器才能根据自身的属性来布局，简单的说，就是瓜分父容器的空间。相反就是说如果父容器没有flex的环境，那么子容器就无法使用flex的规则来划分父容器的空间。
@@ -118,7 +118,7 @@ Flexible Box的缩写，意为"弹性布局"，
 
 ---
 
-<img class="br10" src="/2017/08/28/css3-flex/css12.png">
+<img class="br10 k-lazy" src="/2017/08/28/css3-flex/css12.png">
 
 ### Flex-direction Demo
 
@@ -146,25 +146,25 @@ Flexible Box的缩写，意为"弹性布局"，
     }
 ```
 
-<img class="br10" src="/2017/08/28/css3-flex/c03.png">
+<img class="br10 k-lazy" src="/2017/08/28/css3-flex/c03.png">
 
 ### （1）nowrap（默认）：不换行
 
 ---
 
-<img class="br10"  src="/2017/08/28/css3-flex/c04.png">
+<img class="br10 k-lazy"  src="/2017/08/28/css3-flex/c04.png">
 
 ### (2）wrap：换行，第一行在上方
 
 ---
 
-<img class="br10"  src="/2017/08/28/css3-flex/c05.jpg">
+<img class="br10 k-lazy"  src="/2017/08/28/css3-flex/c05.jpg">
 
 ### (3) wrap-reverse：换行，第一行在下方
 
 ---
 
-<img class="br10"  src="/2017/08/28/css3-flex/c06.jpg">
+<img class="br10 k-lazy"  src="/2017/08/28/css3-flex/c06.jpg">
 
 [demo](http://www.oxxostudio.tw/demo/201501/css-flexbox-demo7.html)  
 
@@ -213,7 +213,7 @@ Flexible Box的缩写，意为"弹性布局"，
 
 ## [下面假设主轴**从左到右**]
 
-<img class="br10" src="/2017/08/28/css3-flex/c07.png">
+<img class="br10 k-lazy" src="/2017/08/28/css3-flex/c07.png">
 
 [demo](http://www.oxxostudio.tw/demo/201501/css-flexbox-demo3.html)  
 
@@ -258,7 +258,7 @@ Flexible Box的缩写，意为"弹性布局"，
 
 ## [下面假设交叉轴**从上到下**]
 
-<img class="br10" src="/2017/08/28/css3-flex/c08.png">
+<img class="br10 k-lazy" src="/2017/08/28/css3-flex/c08.png">
 
 ```css
     .box {
