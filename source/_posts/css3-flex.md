@@ -8,12 +8,19 @@ tags:
 ---
 
 
+<style type="text/css">
+    .br10{border-radius: 6px;}
+</style>
+
+<img class="br10 k-lazy" src="/2017/08/28/css3-flex/c01.png">
+
+<!-- more -->
+
+
 布局的传统解决方案，基于盒状模型，依赖 display属性 + position属性 + float属性。它对于那些特殊布局非常不方便，比如，[垂直居中](https://css-tricks.com/centering-css-complete-guide/)就不容易实现。
 
 ## W3C提出的一种新的方案
 ### Flex布局，可以简便、完整、响应式地实现各种页面布局。
-
-<img src="/2017/08/28/css3-flex/c01.png">
 
 
 

@@ -7,9 +7,16 @@ tags:
 - grid
 ---
 
-# CSS3 Grid
+<style type="text/css">
+    .br10{border-radius: 6px;}
+</style>
 
-<img class="br10" src="/2018/05/18/css3-grid/c01.jpg">
+<img class="br10 k-lazy" src="/2018/05/18/css3-grid/c01.jpg">
+
+<!-- more -->
+
+
+# CSS3 Grid
 
 
 css布局： <span class="yellow">Table</span> **->** <span class="blue">Float + Position </span>**-->** <span class="green">Flex</span>
