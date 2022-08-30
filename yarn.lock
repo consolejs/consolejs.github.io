@@ -995,6 +995,7 @@
     "sntp" "1.x.x"
 
 "hexo-asset-image@git+https://github.com/CodeFalling/hexo-asset-image.git":
+  "integrity" "sha512-8LtFXChq+tQXuxKcRLP22hxGUGlZucUaIbVEuqhuFnKkt6M1dUBazzc5guCW+uqskVQOe7yMvdxkNu10m7toPg=="
   "resolved" "git+ssh://git@github.com/CodeFalling/hexo-asset-image.git#dc5a811c118564368e75ab493b2d7b8480dacb92"
   "version" "0.0.3"
   dependencies:
