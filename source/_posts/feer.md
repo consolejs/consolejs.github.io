@@ -11,7 +11,7 @@ tags:
     .br10{border-radius: 6px;}
 </style>
 
-<img class="br10 k-lazy" src="/2020/06/12/feer/f_02.jpg">
+<img class="br10 k-lazy" src="/2020/06/12/feer/f_02.jpeg">
 
 
 <!-- more -->
