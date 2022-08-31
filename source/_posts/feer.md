@@ -1,7 +1,7 @@
 ---
 title: 前端集成开发环境 FEER
 date: 2020-06-12 09:21:26
-categories: js
+categories: 前端
 tags:
 - 开发环境
 - RollupJS
@@ -126,7 +126,6 @@ npx feer-cli <project-name>
 * ES6书写优雅的JS代码
 * 支持自动打开浏览器(自动获取本地的ip地址)
 * 历经多个项目考验、不断改进升级
-* 可兼容支持ie6、7+
 
 ***
 
